@@ -112,7 +112,8 @@ export default function App() {
       </nav>
 
       {/* HERO SECTION (Symmetrical & Imposing) */}
-      <section id="beranda" className="relative min-h-screen flex items-center justify-center pt-20">
+      {}
+      <section id="beranda" className="relative min-h-screen flex items-center justify-center pt-24 pb-20 lg:pt-32 lg:pb-32">
         <div className="absolute inset-0 z-0 bg-[#0A2540]">
           <img 
             src="https://images.unsplash.com/photo-1541888086425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" 
@@ -122,7 +123,7 @@ export default function App() {
           <div className="absolute inset-0 bg-gradient-to-b from-[#0A2540]/80 via-transparent to-[#0A2540]"></div>
         </div>
         
-        <div className="relative z-10 w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center mt-10">
+        <div className="relative z-10 w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col justify-center min-h-[60vh]">
           <div className="inline-flex items-center justify-center space-x-3 mb-8">
             <span className="w-12 h-0.5 bg-[#E31837]"></span>
             <span className="text-[#C5A059] text-sm md:text-base font-bold tracking-[0.2em] uppercase">PT Solo Bangun Pratama</span>
@@ -138,7 +139,8 @@ export default function App() {
             Menghadirkan manajemen konstruksi terpadu dan pengadaan material berkualitas tinggi. Berdedikasi untuk merealisasikan visi arsitektural dan struktural bagi sektor pemerintah, komersial, maupun residensial.
           </p>
           
-          <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
+          {}
+          <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6 mt-4 mb-8">
             <a href="#portofolio" className="w-full sm:w-auto px-8 py-4 bg-[#E31837] text-white font-bold text-sm uppercase tracking-wider rounded-sm hover:bg-[#c2142e] transition-colors shadow-[0_10px_20px_-10px_rgba(227,24,55,0.6)]">
               Lihat Portofolio
             </a>
