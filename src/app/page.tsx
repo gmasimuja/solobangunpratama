@@ -28,7 +28,7 @@ export default function App() {
   return (
     <div className="min-h-screen bg-[#F8FAFC] font-sans text-slate-800 selection:bg-[#E31837] selection:text-white">
       
-      {/* HEADER & NAVIGATION */}
+      {}
       <nav className={`fixed w-full z-50 transition-all duration-500 border-b ${scrolled ? 'bg-white/95 backdrop-blur-md shadow-sm border-slate-200 py-4' : 'bg-white/10 backdrop-blur-sm border-white/10 py-6'}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center">
@@ -111,9 +111,8 @@ export default function App() {
         </div>
       </nav>
 
-      {/* HERO SECTION (Symmetrical & Imposing) */}
       {}
-      <section id="beranda" className="relative min-h-screen flex items-center justify-center pt-24 pb-20 lg:pt-32 lg:pb-32">
+      <section id="beranda" className="relative min-h-screen flex items-center justify-center pt-36 pb-20 md:pt-40 lg:pt-48 lg:pb-32">
         <div className="absolute inset-0 z-0 bg-[#0A2540]">
           <img 
             src="https://images.unsplash.com/photo-1541888086425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" 
@@ -124,23 +123,22 @@ export default function App() {
         </div>
         
         <div className="relative z-10 w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col justify-center min-h-[60vh]">
-          <div className="inline-flex items-center justify-center space-x-3 mb-8">
-            <span className="w-12 h-0.5 bg-[#E31837]"></span>
-            <span className="text-[#C5A059] text-sm md:text-base font-bold tracking-[0.2em] uppercase">PT Solo Bangun Pratama</span>
-            <span className="w-12 h-0.5 bg-[#E31837]"></span>
+          <div className="inline-flex items-center justify-center space-x-3 mb-6 md:mb-8">
+            <span className="w-10 md:w-12 h-0.5 bg-[#E31837]"></span>
+            <span className="text-[#C5A059] text-xs md:text-base font-bold tracking-[0.2em] uppercase">PT Solo Bangun Pratama</span>
+            <span className="w-10 md:w-12 h-0.5 bg-[#E31837]"></span>
           </div>
           
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-8">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-6 md:mb-8">
             Keunggulan dalam <br/>
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-200 to-[#C5A059]">Rekayasa Infrastruktur.</span>
           </h1>
           
-          <p className="text-lg md:text-xl text-slate-300 mb-12 max-w-3xl mx-auto leading-relaxed font-light">
+          <p className="text-base md:text-xl text-slate-300 mb-10 md:mb-12 max-w-3xl mx-auto leading-relaxed font-light px-2 sm:px-0">
             Menghadirkan manajemen konstruksi terpadu dan pengadaan material berkualitas tinggi. Berdedikasi untuk merealisasikan visi arsitektural dan struktural bagi sektor pemerintah, komersial, maupun residensial.
           </p>
           
-          {}
-          <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6 mt-4 mb-8">
+          <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6 mt-2 mb-8">
             <a href="#portofolio" className="w-full sm:w-auto px-8 py-4 bg-[#E31837] text-white font-bold text-sm uppercase tracking-wider rounded-sm hover:bg-[#c2142e] transition-colors shadow-[0_10px_20px_-10px_rgba(227,24,55,0.6)]">
               Lihat Portofolio
             </a>
@@ -151,7 +149,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* TENTANG KAMI / CORE VALUES (Symmetrical 3-Column Grid) */}
+      {}
       <section id="tentang-kami" className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
@@ -191,7 +189,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* LAYANAN / TARGET KLIEN (Symmetrical 4-Column Grid) */}
+      {}
       <section id="layanan" className="py-24 bg-[#0A2540] border-t-4 border-[#E31837]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
@@ -239,7 +237,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* PORTOFOLIO SECTION (Balanced Layout) */}
+      {}
       <section id="portofolio" className="py-24 bg-[#F8FAFC]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
@@ -323,7 +321,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* KONTAK & LOKASI (Perfectly Balanced 50/50 Split) */}
+      {}
       <section id="kontak" className="border-t border-slate-200 bg-white">
         <div className="grid lg:grid-cols-2 min-h-[600px]">
           
@@ -398,7 +396,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* FOOTER */}
+      {}
       <footer className="bg-[#051322] pt-20 pb-10 border-t-4 border-[#E31837]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-12 gap-12 lg:gap-8 border-b border-white/10 pb-16">
@@ -451,6 +449,7 @@ export default function App() {
         </div>
       </footer>
       
+      {}
       <style dangerouslySetInnerHTML={{__html: `
         @keyframes kenburns {
           0% { transform: scale(1) translate(0, 0); }
