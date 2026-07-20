@@ -1,17 +1,11 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Building2, HardHat, CheckCircle2, Clock, MapPin, Phone, Mail, ArrowRight, ChevronRight, MessageSquare, ShieldCheck, Ruler, Briefcase, Calendar, Award, Factory } from 'lucide-react';
+import { Menu, X, Building2, HardHat, Clock, MapPin, Phone, Mail, ChevronRight, MessageSquare, ShieldCheck, Briefcase, Calendar, Award, Factory, Globe } from 'lucide-react';
 
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-
-  // Palet Warna Corporate Premium:
-  // Primary: #0A2540 (Deep Corporate Navy)
-  // Secondary: #E31837 (Vibrant Red)
-  // Accent: #C5A059 (Premium Gold)
-  // Backgrounds: #FFFFFF, #F8FAFC (Slate 50), #051322 (Darker Navy for Footer)
 
   const waNumber = "6287777300583";
   const waMessage = "Halo Tim PT. Solo Bangun Pratama, saya ingin berkonsultasi mengenai rencana proyek konstruksi...";
@@ -29,11 +23,11 @@ export default function App() {
     <div className="min-h-screen bg-[#F8FAFC] font-sans text-slate-800 selection:bg-[#E31837] selection:text-white">
       
       {}
+      {/* HEADER & NAVIGATION */}
       <nav className={`fixed w-full z-50 transition-all duration-500 border-b ${scrolled ? 'bg-white/95 backdrop-blur-md shadow-sm border-slate-200 py-4' : 'bg-white/10 backdrop-blur-sm border-white/10 py-6'}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center">
             
-            {/* Logo Section (Perfectly Centered Vertically) */}
             <div className="flex-shrink-0 flex items-center cursor-pointer group gap-4">
               <div className={`w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center overflow-hidden border-2 transition-colors duration-300 ${scrolled ? 'bg-white border-slate-100 shadow-md' : 'bg-white/90 border-transparent shadow-lg'}`}>
                 <img 
@@ -52,7 +46,6 @@ export default function App() {
               </div>
             </div>
 
-            {/* Desktop Menu */}
             <div className="hidden lg:flex space-x-8 items-center">
               {['Beranda', 'Tentang Kami', 'Layanan', 'Portofolio'].map((item) => (
                 <a 
@@ -74,7 +67,6 @@ export default function App() {
               </a>
             </div>
 
-            {/* Mobile menu button */}
             <div className="lg:hidden flex items-center">
               <button 
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -86,7 +78,6 @@ export default function App() {
           </div>
         </div>
 
-        {/* Mobile Menu Dropdown */}
         <div className={`lg:hidden absolute w-full bg-white transition-all duration-300 origin-top shadow-2xl border-t border-slate-100 ${isMenuOpen ? 'scale-y-100 opacity-100' : 'scale-y-0 opacity-0'}`}>
           <div className="px-6 py-8 space-y-4">
             {['Beranda', 'Tentang Kami', 'Layanan', 'Portofolio'].map((item) => (
@@ -112,7 +103,8 @@ export default function App() {
       </nav>
 
       {}
-      <section id="beranda" className="relative min-h-screen flex items-center justify-center pt-36 pb-20 md:pt-40 lg:pt-48 lg:pb-32">
+      {/* HERO SECTION */}
+      <section id="beranda" className="relative flex flex-col justify-center pt-36 pb-20 md:pt-40 lg:pt-48 lg:pb-32 min-h-[60vh] md:min-h-screen overflow-hidden">
         <div className="absolute inset-0 z-0 bg-[#0A2540]">
           <img 
             src="https://images.unsplash.com/photo-1541888086425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" 
@@ -122,11 +114,11 @@ export default function App() {
           <div className="absolute inset-0 bg-gradient-to-b from-[#0A2540]/80 via-transparent to-[#0A2540]"></div>
         </div>
         
-        <div className="relative z-10 w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col justify-center min-h-[60vh]">
+        <div className="relative z-10 w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col justify-center flex-grow">
           <div className="inline-flex items-center justify-center space-x-3 mb-6 md:mb-8">
-            <span className="w-10 md:w-12 h-0.5 bg-[#E31837]"></span>
+            <span className="w-8 md:w-12 h-0.5 bg-[#E31837]"></span>
             <span className="text-[#C5A059] text-xs md:text-base font-bold tracking-[0.2em] uppercase">PT Solo Bangun Pratama</span>
-            <span className="w-10 md:w-12 h-0.5 bg-[#E31837]"></span>
+            <span className="w-8 md:w-12 h-0.5 bg-[#E31837]"></span>
           </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-6 md:mb-8">
@@ -134,11 +126,11 @@ export default function App() {
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-200 to-[#C5A059]">Rekayasa Infrastruktur.</span>
           </h1>
           
-          <p className="text-base md:text-xl text-slate-300 mb-10 md:mb-12 max-w-3xl mx-auto leading-relaxed font-light px-2 sm:px-0">
+          <p className="text-base md:text-lg lg:text-xl text-slate-300 mb-10 md:mb-12 max-w-3xl mx-auto leading-relaxed font-light px-2">
             Menghadirkan manajemen konstruksi terpadu dan pengadaan material berkualitas tinggi. Berdedikasi untuk merealisasikan visi arsitektural dan struktural bagi sektor pemerintah, komersial, maupun residensial.
           </p>
           
-          <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6 mt-2 mb-8">
+          <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6 mt-4 mb-8">
             <a href="#portofolio" className="w-full sm:w-auto px-8 py-4 bg-[#E31837] text-white font-bold text-sm uppercase tracking-wider rounded-sm hover:bg-[#c2142e] transition-colors shadow-[0_10px_20px_-10px_rgba(227,24,55,0.6)]">
               Lihat Portofolio
             </a>
@@ -150,6 +142,7 @@ export default function App() {
       </section>
 
       {}
+      {/* TENTANG KAMI */}
       <section id="tentang-kami" className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
@@ -190,6 +183,7 @@ export default function App() {
       </section>
 
       {}
+      {/* LAYANAN */}
       <section id="layanan" className="py-24 bg-[#0A2540] border-t-4 border-[#E31837]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
@@ -206,28 +200,24 @@ export default function App() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {/* Target 1 */}
             <div className="bg-white/5 border border-white/10 p-8 hover:bg-white/10 transition-colors">
               <Building2 size={40} className="text-[#C5A059] mb-6" />
               <h4 className="text-xl font-bold text-white mb-3">Fasilitas Publik & Pemerintah</h4>
               <p className="text-slate-400 text-sm">Pembangunan dan rehabilitasi sarana prasarana negara, sekolah, hingga fasilitas ibadah sesuai regulasi tender resmi.</p>
             </div>
             
-            {/* Target 2 */}
             <div className="bg-white/5 border border-white/10 p-8 hover:bg-white/10 transition-colors">
               <Briefcase size={40} className="text-[#E31837] mb-6" />
               <h4 className="text-xl font-bold text-white mb-3">Area Komersial & Ruko</h4>
               <p className="text-slate-400 text-sm">Optimalisasi ruang bisnis dan perkantoran dengan desain fungsional dan durabilitas tinggi untuk investasi jangka panjang.</p>
             </div>
 
-            {/* Target 3 */}
             <div className="bg-white/5 border border-white/10 p-8 hover:bg-white/10 transition-colors">
               <HardHat size={40} className="text-[#C5A059] mb-6" />
               <h4 className="text-xl font-bold text-white mb-3">Residensial & Perumahan</h4>
               <p className="text-slate-400 text-sm">Pembangunan kawasan hunian atau rumah tapak kustom dengan detail arsitektur yang aman, nyaman, dan estetis.</p>
             </div>
 
-            {/* Target 4 */}
             <div className="bg-white/5 border border-white/10 p-8 hover:bg-white/10 transition-colors">
               <Factory size={40} className="text-[#E31837] mb-6" />
               <h4 className="text-xl font-bold text-white mb-3">Supplier Material</h4>
@@ -238,6 +228,7 @@ export default function App() {
       </section>
 
       {}
+      {/* PORTOFOLIO */}
       <section id="portofolio" className="py-24 bg-[#F8FAFC]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
@@ -246,7 +237,6 @@ export default function App() {
             <h3 className="text-3xl md:text-4xl font-extrabold text-[#0A2540]">Dedikasi Dalam Tiap Bangunan</h3>
           </div>
 
-          {/* Selesai (2-Column Balanced Grid) */}
           <div className="mb-16">
             <div className="flex items-center justify-center mb-10">
               <span className="w-16 h-px bg-slate-300 mr-4"></span>
@@ -255,10 +245,9 @@ export default function App() {
             </div>
             
             <div className="grid md:grid-cols-2 gap-8">
-              {/* Project 1 */}
               <div className="bg-white group cursor-pointer shadow-sm border border-slate-100">
                 <div className="relative overflow-hidden aspect-[16/9]">
-                  <img src="https://images.unsplash.com/photo-1572981779307-38b8cabb2407?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Masjid Agung Magelang" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                  <img src="/masjid-magelang.jpeg" alt="Masjid Agung Magelang" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                   <div className="absolute top-4 left-4 bg-[#C5A059] text-white text-xs font-bold px-3 py-1 uppercase tracking-widest shadow-md">Selesai</div>
                 </div>
                 <div className="p-8">
@@ -270,10 +259,9 @@ export default function App() {
                 </div>
               </div>
 
-              {/* Project 2 */}
               <div className="bg-white group cursor-pointer shadow-sm border border-slate-100">
                 <div className="relative overflow-hidden aspect-[16/9]">
-                  <img src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Fasilitas Air Loka Janti" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                  <img src="/fasilitas-dak.jpeg" alt="Fasilitas Air Loka Janti" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                   <div className="absolute top-4 left-4 bg-[#C5A059] text-white text-xs font-bold px-3 py-1 uppercase tracking-widest shadow-md">Selesai</div>
                 </div>
                 <div className="p-8">
@@ -287,7 +275,6 @@ export default function App() {
             </div>
           </div>
 
-          {/* On-going (3-Column Symmetrical Cards) */}
           <div>
             <div className="flex items-center justify-center mb-10">
               <span className="w-16 h-px bg-slate-300 mr-4"></span>
@@ -322,6 +309,7 @@ export default function App() {
       </section>
 
       {}
+      {/* KONTAK & LOKASI (Revert ke 50/50 Split) */}
       <section id="kontak" className="border-t border-slate-200 bg-white">
         <div className="grid lg:grid-cols-2 min-h-[600px]">
           
@@ -384,7 +372,7 @@ export default function App() {
           {/* Map Section (Right - Absolute fill inside grid) */}
           <div className="relative h-[400px] lg:h-full w-full bg-slate-200">
             <iframe 
-              src="https://maps.google.com/maps?q=-7.5583348,110.8143924&t=&z=16&ie=UTF8&iwloc=&output=embed"
+              src="https://maps.google.com/maps?q=Jl.+Teratai+I+No.4,+Mangkubumen,+Banjarsari,+Surakarta&t=&z=16&ie=UTF8&iwloc=&output=embed"
               className="absolute inset-0 w-full h-full border-0" 
               allowFullScreen={false} 
               loading="lazy" 
@@ -397,11 +385,12 @@ export default function App() {
       </section>
 
       {}
+      {/* FOOTER */}
       <footer className="bg-[#051322] pt-20 pb-10 border-t-4 border-[#E31837]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-12 gap-12 lg:gap-8 border-b border-white/10 pb-16">
             
-            <div className="md:col-span-5">
+            <div className="md:col-span-4">
               <div className="flex flex-col mb-6">
                 <span className="text-2xl font-extrabold text-white tracking-tight">
                   SOLO BANGUN <span className="text-[#E31837]">PRATAMA</span>
@@ -415,7 +404,7 @@ export default function App() {
               </p>
             </div>
             
-            <div className="md:col-span-3">
+            <div className="md:col-span-2">
               <h4 className="text-white font-bold mb-6 uppercase tracking-widest text-sm">Tautan Cepat</h4>
               <ul className="space-y-4">
                 {['Beranda', 'Tentang Kami', 'Layanan', 'Portofolio'].map((item) => (
@@ -429,14 +418,51 @@ export default function App() {
               </ul>
             </div>
 
-            <div className="md:col-span-4">
+            <div className="md:col-span-3">
               <h4 className="text-white font-bold mb-6 uppercase tracking-widest text-sm">Fokus Klien</h4>
               <div className="flex flex-wrap gap-2">
-                {['Pemerintah Daerah', 'Instansi Swasta', 'Pengembang Perumahan', 'Fasilitas Publik', 'Area Komersial', 'Pendidikan'].map((tag) => (
+                {['Pemerintah', 'Swasta', 'Perumahan', 'Fasilitas Publik', 'Komersial', 'Pendidikan'].map((tag) => (
                   <span key={tag} className="px-3 py-1 bg-white/5 border border-white/10 text-slate-300 text-xs font-medium tracking-wide">
                     {tag}
                   </span>
                 ))}
+              </div>
+            </div>
+
+            <div className="md:col-span-3">
+              <h4 className="text-white font-bold mb-6 uppercase tracking-widest text-sm">Terhubung Bersama Kami</h4>
+              
+              <div className="flex space-x-3 mb-6">
+                <a href="https://www.linkedin.com/company/sbp-indonesia/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-sm bg-white/5 border border-white/10 flex items-center justify-center group hover:bg-[#0A2540] hover:border-[#C5A059] transition-all" title="LinkedIn">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-slate-400 group-hover:text-[#C5A059] transition-colors">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                    <rect x="2" y="9" width="4" height="12"></rect>
+                    <circle cx="4" cy="4" r="2"></circle>
+                  </svg>
+                </a>
+                <a href="https://www.instagram.com/solobangunpratama?igsh=OXNqN2hvbnFrb2dp" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-sm bg-white/5 border border-white/10 flex items-center justify-center group hover:bg-[#0A2540] hover:border-[#E31837] transition-all" title="Instagram">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-slate-400 group-hover:text-[#E31837] transition-colors">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                  </svg>
+                </a>
+                <a href="https://www.tiktok.com/@solobangunpratama" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-sm bg-white/5 border border-white/10 flex items-center justify-center group hover:bg-[#0A2540] hover:border-white transition-all" title="TikTok">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" className="text-slate-400 group-hover:text-white transition-colors">
+                    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a5.64 5.64 0 0 1-1.04-.1z"/>
+                  </svg>
+                </a>
+              </div>
+              
+              <div className="space-y-3">
+                <a href="https://www.solobangunpratama.com" target="_blank" rel="noopener noreferrer" className="flex items-center text-slate-400 hover:text-white transition-colors text-sm group">
+                  <Globe size={16} className="mr-3 text-[#C5A059] group-hover:text-white transition-colors" />
+                  www.solobangunpratama.com
+                </a>
+                <a href={waLink} target="_blank" rel="noopener noreferrer" className="flex items-center text-slate-400 hover:text-white transition-colors text-sm group">
+                  <MessageSquare size={16} className="mr-3 text-[#25D366] group-hover:text-white transition-colors" />
+                  0877 - 7730 - 0583
+                </a>
               </div>
             </div>
 
